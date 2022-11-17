@@ -1,0 +1,32 @@
+ALGORITHM algorithm_name
+VAR
+    i:integer;
+    str:string;
+    len:integer:=0;
+    j: integer;
+    k:integer;
+    count:=0;
+    sum:=0;
+BEGIN
+    FOR i=0, i<str.length, i++  DO
+        IF (str[i] <> ".") THEN
+          len:=len+1
+        END_IF
+    END_FOR
+
+
+
+FOR j=0, j<len, j++  DO
+   IF (str[j]=" ") THEN
+    count:=count+1
+    END_IF
+END_FOR
+write (count)
+
+FOR k=0, k<len ,k++  DO
+    IF (str[k] in ["a","o","u","e","i","y"]) THEN
+       sum:=sum+1
+    END_IF
+END_FOR
+write (sum)
+END
